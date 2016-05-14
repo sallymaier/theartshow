@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>TheArtShow.tv</title>
+
+	<meta http-equiv="cleartype" content="on">
+
+<!-- 	<link rel="shortcut icon" href="/favicon.ico">
+ -->
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fonts.css" media="all">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/theartshow.css" media="all">
+
+</head>
+
+<body>
+
+
+		<div class="header">	
+		</div>
+        <ul class="sidebar">
+	        <li class="info"><a href="#" class="whatis">Logo</a>
+	        </li>
+	        <li id="filters" class="navlevel1"><a data-toggle="collapse" href="#menudiv">Episodes</a></li>
+	            <div id="menudiv" data-parent="filters" class="collapse clickbait-filter sorter">	<!-- mustache menu -->
+	            </div>
+	        </li>
+
+	        <li class="navlevel1"><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
+	        </li>
+	        
+        </ul>
+
+        <div class="container">
+
+			<div class="fullscreen-bg">
+			    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+			        <source src="images/hardhitting.mp4">
+			    </video>
+			</div>
+
+			<article class="" id="allvideos" >
+				<div class="list grid" id="videosdiv">
+	  				<!-- clickbait from spreadsheet clickbaitarticles -->
+				</div>
+			</article>
+		</div>
+
+
+
+
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+	    <script src="js/mustache.js"></script>
+	    <script src="js/list.js"></script>
+		<script src="js/jquery.imagesloaded.min.js"></script>
+		<script src="js/wookmark.js"></script>
+   		<script src="js/theartshow.js"></script>
+
+
+
+
+
+	    <script id="menu" type="text/template">
+	    	{{#.}}
+				<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{general}}">{{general}}</a></li>
+			{{/.}}
+		</script>
+
+		<script id="titlegen" type="text/template">
+		    {{#.}}
+			    <div id="{{general}}" class="pagetitle ui-widget-content" data-trigger="manual">{{general}}</div>
+		    {{/.}}
+	    </script>
+
+	    <script id="videos" type="text/template">
+		    {{#.}}
+		    <li class="{{Title}} {{VideoID}} {{Participants}} {{Tags}}">
+		      <div class="block" >
+		        <div class="imageContainer imggrid ">
+		            <iframe src="https://player.vimeo.com/video/{{videoid}}#t={{starttime}}"   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		        </div>
+		        <div class="info {{Title}} {{Tags}} {{Participants}}">
+		          <p class="pub">{{Title}}</p>
+		              <p class="subhead">Participants</p>
+		              <p class="income">{{Participants}}</p>
+		              <p class="subhead">Tagged</p>
+		              <p class="layers">{{Tags}}</p>
+		          </div>
+		        </div>
+		      </li>
+		      {{/.}}
+		</script>
+
+    
+
+
+
+</body>
+</html>
