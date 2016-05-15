@@ -37,16 +37,22 @@
 		<div class="header">	
 		</div>
         <ul class="sidebar">
-        		<a href="#" >Logo</a></li>
+        		<li class="logo"><a href="#top"><img src="images/TAS_logo.gif"></a></li>
 	              <div class="sorter">
 					<li id="filters" class="navlevel1"><a href="#episodemenu" data-toggle="collapse" data-parent=".sorter">Episodes</a></li>
-					<ul class="collapse filter" id="episodemenu"><!-- from mustache --></ul>
+					<div class="episodefilter">
+						<ul class="collapse " id="episodemenu"><!-- from mustache --></ul>
+					</div>
 			            
 			        <li id="filters" class="navlevel1"><a href="#participantmenu" data-toggle="collapse" data-parent=".sorter" >Participants</a></li>
-			        <ul class="collapse filter"  id="participantmenu"><!-- from mustache --></ul>
+			        <div class="participantfilter">
+			        	<ul class="collapse "  id="participantmenu"><!-- from mustache --></ul>
+			        </div>
 
 			        <li id="filters" class="navlevel1"><a data-toggle="collapse" href="#clipsmenu" data-parent=".sorter">Clips</a></li>
-			        <ul class="collapse filter"  id="clipsmenu"><!-- from mustache --></ul>
+			        <div class="episodefilter">
+			        	<ul class="collapse filter"  id="clipsmenu"><!-- from mustache --></ul>
+			        </div>
 
 			        <li class="navlevel1"><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
 			        </li>
@@ -54,7 +60,7 @@
         </ul>
 
         
-		<div class="fullscreen-container">
+		<div class="fullscreen-container" id="top">
 			<div class="fullscreen-bg">
 			    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
 			        <source src="images/preview.mp4">
@@ -88,19 +94,19 @@
 
 	    <script id="episodemenulist" type="text/template">
 	    	{{#.}}
-		        <li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{episodetitles}}">{{episodetitles}}</a></li>
+		        <li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-episode="{{episodetitles}}">{{episodetitles}}</a></li>
 			{{/.}}
 		</script>
 
 		<script id="participantmenulist" type="text/template">
 	    	{{#.}}
-		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{participants}}">{{participants}}</a></li>
+		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-participant="{{participants}}">{{participants}}</a></li>
 			{{/.}}
 		</script>
 
 		<script id="clipsmenulist" type="text/template">
 	    	{{#.}}
-		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{clips}}">{{clips}}</a></li>
+		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-episode="{{clips}}">{{clips}}</a></li>
 			{{/.}}
 		</script>
 
@@ -113,7 +119,7 @@
 		            <iframe src="https://player.vimeo.com/video/{{videoid}}#t={{starttime}}"   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		        </div>
 		        <div class="info {{title}} {{tags}} {{participants}}">
-		          <p class="pub">{{title}}&nbsp</p>
+		          <p class="titlelist">{{title}}&nbsp</p>
 		              <p class="participants">Participants</p>
 		              <p class="participantlist">{{participants}}&nbsp</p>
 		              <p class="tags">Tagged</p>
@@ -121,7 +127,6 @@
 		          </div>
 		        </div>
 		      </li>
-]
 		      {{/.}}
 		</script>
 
