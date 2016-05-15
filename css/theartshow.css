@@ -48,23 +48,39 @@ a {
 }
 
 
-#MainMenu{
+.sorter{
     text-align: left;
-    font-size: .6em;
     line-height: 1.5em;
-    font-family: "Lato";
     font-weight: 400;
     position: absolute;
     z-index: 10;
 }
 
-#MainMenu a{
+.sorter a{
     text-decoration: none;
     display: inline;
     
 }
 
+.sorter ul {
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+
+
 .sidebar ul li {
+    list-style: none;
+    margin: 0;
+}
+
+.navlevel1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+.navlevel2 {
+    margin-left: 0em;
     list-style: none;
 }
 

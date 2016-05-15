@@ -1,15 +1,23 @@
 $(document).ready(function() {
 
-  $.getJSON('https://sheetlabs.com/SALL/ClickbaitPrinciplesList', function(data) {
-    var template = $('#menu').html();
+  $.getJSON('https://sheetlabs.com/SALL/theartshowtvmenu', function(data) {
+    var template = $('#episodemenulist').html();
     var info = Mustache.to_html(template, data);
-    $('#menudiv').html(info);
+    $('#episodemenu').html(info);
+
+    var template = $('#participantmenulist').html();
+    var info = Mustache.to_html(template, data);
+    $('#participantmenu').html(info);
+    
+    var template = $('#clipsmenulist').html();
+    var info = Mustache.to_html(template, data);
+    $('#clipsmenu').html(info);
 
 
   });
 
 
-  $.getJSON('https://sheetlabs.com/SALL/theartshowtvvideos', function(data) {
+  $.getJSON('https://sheetlabs.com/SALL/theartshowtvvideosv3', function(data) {
 
     //mustache for images
     var template = $('#videos').html();

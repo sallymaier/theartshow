@@ -37,16 +37,20 @@
 		<div class="header">	
 		</div>
         <ul class="sidebar">
-	        <li class="info"><a href="#" class="whatis">Logo</a>
-	        </li>
-	        <li id="filters" class="navlevel1"><a data-toggle="collapse" href="#menudiv">Episodes</a></li>
-	            <div id="menudiv" data-parent="filters" class="collapse clickbait-filter sorter">	<!-- mustache menu -->
-	            </div>
-	        </li>
+        		<a href="#" >Logo</a></li>
+	              <div class="sorter">
+					<li id="filters" class="navlevel1"><a href="#episodemenu" data-toggle="collapse" data-parent=".sorter">Episodes</a></li>
+					<ul class="collapse filter" id="episodemenu"><!-- from mustache --></ul>
+			            
+			        <li id="filters" class="navlevel1"><a href="#participantmenu" data-toggle="collapse" data-parent=".sorter" >Participants</a></li>
+			        <ul class="collapse filter"  id="participantmenu"><!-- from mustache --></ul>
 
-	        <li class="navlevel1"><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
-	        </li>
-	        
+			        <li id="filters" class="navlevel1"><a data-toggle="collapse" href="#clipsmenu" data-parent=".sorter">Clips</a></li>
+			        <ul class="collapse filter"  id="clipsmenu"><!-- from mustache --></ul>
+
+			        <li class="navlevel1"><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
+			        </li>
+			      </div>
         </ul>
 
         <div class="container">
@@ -81,17 +85,24 @@
 
 
 
-	    <script id="menu" type="text/template">
+	    <script id="episodemenulist" type="text/template">
 	    	{{#.}}
-				<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{general}}">{{general}}</a></li>
+		        <li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{episodetitles}}">{{episodetitles}}</a></li>
 			{{/.}}
 		</script>
 
-		<script id="titlegen" type="text/template">
-		    {{#.}}
-			    <div id="{{general}}" class="pagetitle ui-widget-content" data-trigger="manual">{{general}}</div>
-		    {{/.}}
-	    </script>
+		<script id="participantmenulist" type="text/template">
+	    	{{#.}}
+		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{participants}}">{{participants}}</a></li>
+			{{/.}}
+		</script>
+
+		<script id="clipsmenulist" type="text/template">
+	    	{{#.}}
+		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-principle="{{clips}}">{{clips}}</a></li>
+			{{/.}}
+		</script>
+
 
 	    <script id="videos" type="text/template">
 		    {{#.}}
