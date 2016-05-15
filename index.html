@@ -53,19 +53,18 @@
 			      </div>
         </ul>
 
-        <div class="container">
-
-			<div class="fullscreen-container">
-				<div class="fullscreen-bg">
-				    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-				        <source src="images/hardhitting.mp4">
-				    </video>
-				</div>
+        
+		<div class="fullscreen-container">
+			<div class="fullscreen-bg">
+			    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+			        <source src="images/preview.mp4">
+			    </video>
 			</div>
-
-			<div class="solidcontainer" id="allvideos" >
-				<div class="list grid" id="videosdiv">
-	  				<!-- clickbait from spreadsheet clickbaitarticles -->
+		</div>
+		<div class="solidcontainer" >
+			<div class="container" id="allvideos" >
+				<div class="list grid-display" id="videosdiv">
+	  				<!-- videos from spreadsheet  -->
 				</div>
 			</div>
 		</div>
@@ -108,20 +107,21 @@
 
 	    <script id="videos" type="text/template">
 		    {{#.}}
-		    <li class="{{Title}} {{VideoID}} {{Participants}} {{Tags}}">
-		      <div class="block" >
+		    <li class="{{title}} {{videoid}} {{participants}} {{tags}} setwidth">
+		      <div class="block">
 		        <div class="imageContainer imggrid ">
 		            <iframe src="https://player.vimeo.com/video/{{videoid}}#t={{starttime}}"   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		        </div>
-		        <div class="info {{Title}} {{Tags}} {{Participants}}">
-		          <p class="pub">{{Title}}</p>
-		              <p class="subhead">Participants</p>
-		              <p class="income">{{Participants}}</p>
-		              <p class="subhead">Tagged</p>
-		              <p class="layers">{{Tags}}</p>
+		        <div class="info {{title}} {{tags}} {{participants}}">
+		          <p class="pub">{{title}}&nbsp</p>
+		              <p class="participants">Participants</p>
+		              <p class="participantlist">{{participants}}&nbsp</p>
+		              <p class="tags">Tagged</p>
+		              <p class="taglist">{{tags}}&nbsp</p>
 		          </div>
 		        </div>
 		      </li>
+]
 		      {{/.}}
 		</script>
 
