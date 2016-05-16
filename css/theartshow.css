@@ -192,8 +192,6 @@ a:hover:visited {
 .container {
     margin-left: 224px;
     margin-right: 24px;
-
-
 }
 
 #intro {
@@ -256,21 +254,21 @@ a:hover:visited {
     left: 0;
     top:0;
     right: 0;
-    bottom: 30px;
+    bottom: 0;
     background-color: indigo;
     opacity: .65;
     z-index: -99;
     mix-blend-mode: darken;
-    /*-webkit-animation-name: overlay; 
+    -webkit-animation-name: overlay; 
     -webkit-animation-overlay: 60s; 
     animation-name: overlay;
     animation-duration: 60s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;*/
+    animation-timing-function: linear;
 }
 
 
-/*@-webkit-keyframes overlay {
+@-webkit-keyframes overlay {
     0%   {background-color: darkcyan;}
     15%  {background-color: green;}
     30%  {background-color: darkmagenta;}
@@ -288,7 +286,7 @@ a:hover:visited {
     70% {background-color: indigo;}
     85% {background-color: grey;}
     100% {background-color: yellow;}
-}*/
+}
 
 .solidcontainer {
     width: 100vw;
