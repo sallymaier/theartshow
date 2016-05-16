@@ -187,7 +187,7 @@ pre {
     height: 85%;
     position: fixed;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     list-style: none;
     margin-top: 0px;
     font-size: .9em;
