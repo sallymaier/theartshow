@@ -59,6 +59,7 @@ pre {
 }
 
 
+
 .textwhitebg {
     color: black;
     background-color: #ffffff;
@@ -154,14 +155,12 @@ pre {
 .navlevel2 {
     margin-left: 0em;
     list-style: none;
-    font-weight: 500;
-    line-height: 1.4em;
-    padding-bottom: .5em;
-    font-weight: 500;
 }
 
 .navlevel2 a {
     background-color: white;
+    font-weight: 500;
+    line-height: 1.4em;
 }
 
 .navlevel2 a:hover {
@@ -470,6 +469,10 @@ iframe {
     max-width: 100%;
     max-height: 100%;
 
+}
+
+a:empty {
+   display: none;
 }
 
 
