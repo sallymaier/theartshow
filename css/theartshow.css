@@ -79,6 +79,27 @@ pre {
     font-size: .9em;
 }
 
+
+.titlelist {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 900;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    margin: 0;
+    letter-spacing: .05em;
+}
+.participants {
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .1em;
+    margin: 0;
+}
+.participantlist {
+    font-size: .9em;
+    margin-top: 0;
+    line-height: 1.2em;
+}
 .header { 
 }
 
@@ -330,6 +351,11 @@ ul.grid-display {
   margin-top: 60px;
 }
 
+li.grid-display {
+  list-style: none;
+
+}
+
 ul.grid-display li {
   list-style: none;
   margin-bottom: 20px;
@@ -367,7 +393,10 @@ ul.grid-display .thumb {
     padding-left: 15px;
     float: left;
     width: 356px;
+    list-style: none;
+    margin-bottom: 2em;
 }
+
 
 .widewidth {
   width:800px;
