@@ -17,7 +17,7 @@ $(document).ready(function() {
   });
 
 
-  $.getJSON('https://sheetlabs.com/SALL/theartshowtvvideosv3', function(data) {
+  $.getJSON('https://sheetlabs.com/SALL/theartshowtvvideoswithcomments', function(data) {
 
     //mustache for images
     var template = $('#videos').html();

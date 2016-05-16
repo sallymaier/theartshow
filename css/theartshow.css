@@ -149,7 +149,7 @@ a:hover:visited {
 }
 
 .fullscreen-container {
-      height: 105vh;
+      height: 100vh;
       width: 100vw;
 }
 
@@ -157,7 +157,7 @@ a:hover:visited {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 30px;
+  bottom: 0;
   left: 0;
   overflow: hidden;
   z-index: -100;
@@ -194,6 +194,47 @@ a:hover:visited {
     display: none;
   }
 } 
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 30px;
+    background-color: indigo;
+    opacity: .65;
+    z-index: -99;
+    mix-blend-mode: darken;
+    /*-webkit-animation-name: overlay; 
+    -webkit-animation-overlay: 60s; 
+    animation-name: overlay;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+}
+
+
+/*@-webkit-keyframes overlay {
+    0%   {background-color: darkcyan;}
+    15%  {background-color: green;}
+    30%  {background-color: darkmagenta;}
+    45% {background-color: red;}
+    70% {background-color: indigo;}
+    85% {background-color: grey;}
+    100% {background-color: yellow;}
+
+
+@keyframes overlay {
+    0%   {background-color: darkcyan;}
+    15%  {background-color: green;}
+    30%  {background-color: darkmagenta;}
+    45% {background-color: red;}
+    70% {background-color: indigo;}
+    85% {background-color: grey;}
+    100% {background-color: yellow;}
+}*/
 
 .solidcontainer {
     width: 100vw;
@@ -276,15 +317,6 @@ ul.grid-display .thumb {
 }
 
 
-.overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: blue;
-    opacity: 0;
-}
 
 .grid-item:hover  .overlay{
     height:100%;
