@@ -202,12 +202,17 @@ pre {
     height: 85%;
     position: fixed;
     overflow-x: hidden;
+    overflow-y: hidden;
     list-style: none;
     margin-top: 0px;
     font-size: .9em;
     line-height: 1.6em;
     color: #3100B2;
     margin-right: 25px;
+}
+
+.sidebar:hover {
+    overflow-y: scroll;
 }
 
 .sidebar, .sidebarwrapperout {
