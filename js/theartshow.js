@@ -26,7 +26,7 @@ $(document).ready(function() {
     $('#videosdiv').html(info);
 
 
-// 
+ 
 
     var options = {
       valueNames: [ 'titlelist', 'participantlist', 'taglist' ],
@@ -51,6 +51,26 @@ $(document).ready(function() {
           }
       });
 
+      var results = $("#videosdiv li").length
+      console.log(results);
+
+
+
+      if ( results = 1 )  {
+          $( ".setwidth" ).addClass( "widewidth" );
+        }
+      else {
+          $(".setwidth").removeClass( "widewidth" );
+        }
+
+      if ( results = 1 )  {
+          $( ".imageContainer" ).addClass( "widecontainer" );
+        }
+      else {
+          $(".imageContainer").removeClass( "widecontainer" );
+        }
+
+
         $("body, html").animate({ 
             scrollTop: $('#allvideos').offset().top 
         });
@@ -71,6 +91,20 @@ $(document).ready(function() {
 
           }
       });
+
+      if ( results = 1 )  {
+          $( ".setwidth" ).addClass( "widewidth" );
+        }
+      else {
+          $(".setwidth").removeClass( "widewidth" );
+        }
+        
+      if ( results = 1 )  {
+          $( ".imageContainer" ).addClass( "widecontainer" );
+        }
+      else {
+          $(".imageContainer").removeClass( "widecontainer" );
+        }
 
         $("body, html").animate({ 
             scrollTop: $('#allvideos').offset().top 
@@ -93,6 +127,20 @@ $(document).ready(function() {
           }
       });
 
+      if ( results = 1 )  {
+          $( ".setwidth" ).addClass( "widewidth" );
+        }
+      else {
+          $(".setwidth").removeClass( "widewidth" );
+        }
+        
+      if ( results = 1 )  {
+          $( ".imageContainer" ).addClass( "widecontainer" );
+        }
+      else {
+          $(".imageContainer").removeClass( "widecontainer" );
+        }
+
         $("body, html").animate({ 
             scrollTop: $('#allvideos').offset().top 
         });
@@ -103,6 +151,8 @@ $(document).ready(function() {
           //reset
     $('.showall').on('click touch', function()  {
       videos.filter();
+      $(".imageContainer").removeClass( "widecontainer" );
+      $(".setwidth").removeClass( "widewidth" );
       $("body, html").animate({ 
             scrollTop: $('#allvideos').offset().top 
       });
@@ -110,8 +160,9 @@ $(document).ready(function() {
 
     
   });
-
 });
+
+
 
 
 

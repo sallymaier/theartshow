@@ -8,12 +8,13 @@ h1 {
 
 h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     font-style: normal;
     font-variant: normal;
     font-weight: 100;
     color: white;
     letter-spacing: .03em;
+    line-height: 1.25;
 }
 
 h3 {
@@ -57,15 +58,25 @@ pre {
 }
 
 .textblackbg {
-    color:white;
+    color: white;
     background-color: black;
-    padding-top: .1em; 
+    padding-top: .1em;
     padding-bottom: .1em;
     padding-left: .2em;
     padding-right: .2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 2.5em;
+    letter-spacing: .06em;
+    font-size: .9em;
 }
 
 .header { 
+}
+
+.logo a:hover {
+  background-color: none;
+
 }
 
 .logo img {
@@ -173,7 +184,7 @@ a:hover:visited {
 }
 
 #intro {
-  padding-top: 35%;
+  padding-top: 30%;
   padding-left: 25px;
 }
 
@@ -272,6 +283,10 @@ a:hover:visited {
     padding-top: 30px;
 }
 
+#videosdiv {
+  padding-top: 30px;
+}
+
 
 ul.grid-display {
   list-style: none;
@@ -311,11 +326,27 @@ ul.grid-display li {
 
 ul.grid-display .thumb {
   height: 277px;
+}
+
+.setwidth {
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 356px;
+}
+
+.widewidth {
+  width:800px;
 }
 
 .imageContainer {
     position: relative;
     height: 183px;
+}
+
+.widecontainer {
+  height:433px;
 }
 
 .imageContainer img {
@@ -345,13 +376,7 @@ iframe {
   height: 100%;
 }
 
-.setwidth {
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-    width: 356px;
-}
+
 
 
 
