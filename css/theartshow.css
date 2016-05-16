@@ -149,7 +149,6 @@ pre {
 }
 
 .sidebar {
-    width: 250px;
     height: 85%;
     position: fixed;
     overflow-x: hidden;
@@ -160,6 +159,26 @@ pre {
     line-height: 1.6em;
     color: #3100B2;
     margin-right: 25px;
+}
+
+.sidebar, .sidebarwrapperout {
+ width: 250px;
+}
+ 
+.sidebarwrapperout {
+ position: relative;
+ overflow: hidden;
+}
+ 
+.sidebarwrapperin {
+ position: absolute;
+ left: 0;
+ overflow-x: hidden;
+ overflow-y: scroll;
+}
+ 
+.sidebarwrapperin::-webkit-scrollbar {
+ display: none;
 }
 
 a {
@@ -259,16 +278,16 @@ a:hover:visited {
     opacity: .65;
     z-index: -99;
     mix-blend-mode: darken;
-    -webkit-animation-name: overlay; 
+/*    -webkit-animation-name: overlay; 
     -webkit-animation-overlay: 60s; 
     animation-name: overlay;
     animation-duration: 60s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear;*/
 }
 
 
-@-webkit-keyframes overlay {
+/*@-webkit-keyframes overlay {
     0%   {background-color: darkcyan;}
     15%  {background-color: green;}
     30%  {background-color: darkmagenta;}
@@ -286,13 +305,15 @@ a:hover:visited {
     70% {background-color: indigo;}
     85% {background-color: grey;}
     100% {background-color: yellow;}
-}
+}*/
 
 .solidcontainer {
+    min-width: 100%;
     width: 100vw;
     background-color: white;
     margin-top: 0;
     padding-top: 30px;
+
 }
 
 #videosdiv {
