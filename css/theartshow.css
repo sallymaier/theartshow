@@ -19,15 +19,11 @@ h2 {
 
 @media (max-width: 1150px) {
   h2 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
-@media (max-width: 1024px) {
-  h2 {
-    font-size: 2em;
-  }
-} 
+
 
 h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -197,11 +193,13 @@ a:hover:visited {
     margin-left: 224px;
     margin-right: 24px;
 
+
 }
 
 #intro {
-  padding-top: 30%;
-  padding-left: 25px;
+  padding-left: 50px;
+  position: absolute;
+  bottom: 24px;
 }
 
 .fullscreen-container {
