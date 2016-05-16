@@ -74,10 +74,7 @@ pre {
 .header { 
 }
 
-.logo a:hover {
-  background-color: none;
 
-}
 
 .logo img {
     width: 100%;
@@ -166,6 +163,11 @@ a:hover, a:active, a:focus {
     text-decoration: none;
     color: black;
     background-color: white;
+}
+
+.logo a:hover {
+  background-color: transparent;
+
 }
 
 /*a:visited {
