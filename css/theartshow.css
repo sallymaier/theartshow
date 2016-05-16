@@ -183,6 +183,21 @@ pre {
     color: white;
 }
 
+.aboutnav {
+  display: block;
+  margin-top: 24px;  
+}
+
+/*.aboutnav a {
+  color: white;
+  background-color: black;
+}
+
+.aboutnav a:hover {
+  color: black;
+  background-color: white;
+}*/
+
 .sidebar {
     height: 85%;
     position: fixed;
@@ -456,10 +471,15 @@ iframe {
 }
 
 
-.about {
+
+#about {
     margin-left: 15px;
     width: 75%;
     padding-bottom: 100px;
+}
+
+.footer {
+  padding-bottom: 100px;
 }
 
 a:empty {

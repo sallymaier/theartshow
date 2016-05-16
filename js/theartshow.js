@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $(" a.scroll").click(function(event){
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+  });
+
   $.getJSON('https://sheetlabs.com/SALL/theartshowtvmenu', function(data) {
     var template = $('#episodemenulist').html();
     var info = Mustache.to_html(template, data);
