@@ -17,6 +17,18 @@ h2 {
     line-height: 1.25;
 }
 
+@media (max-width: 1150px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 2.5em;
+  }
+} 
+
 h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
