@@ -437,11 +437,9 @@ ul.grid-display .thumb {
   .widewidth {
     width: 356px;
   }
+}
 
-  .fullscreen-bg__video {
-    display: none;
-  }
-} 
+
 
 .imageContainer {
     position: relative;
@@ -455,8 +453,8 @@ ul.grid-display .thumb {
 @media (max-width: 1024px) {
   .widecontainer {
     height: 183px;
-    
   }
+}
 
 .imageContainer img {
     position: relative;
