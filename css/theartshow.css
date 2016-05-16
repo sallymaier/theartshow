@@ -156,12 +156,14 @@ pre {
     width: 250px;
     height: 85%;
     position: fixed;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     list-style: none;
     margin-top: 0px;
     font-size: .9em;
     line-height: 1.6em;
     color: #3100B2;
+    margin-right: 25px;
 }
 
 a {
