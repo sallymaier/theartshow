@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>	
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/slicknav.css" />
 	<link rel="stylesheet" href="css/theartshow.css" media="all">
 
 </head>
@@ -36,11 +37,36 @@
 
 		<div class="header">	
 		</div>
-		<div class="sidebarwrapperout">
-		<div class="sidebarwrapperin">
+
+		<ul id="mobilemenu">
+        			<li id="filters" >Episodes
+	        			<ul class="episodefilter filter" id="episodemenumobile">
+							<!-- from mustache -->
+						</ul>
+					</li>
+			            
+			        <li id="filters" >Participants
+			        	<ul class="participantfilter filter " id="participantmenumobile">
+			        		<!-- from mustache -->
+			        	</ul>
+			        </li>
+
+			        <li id="filters" >Clips
+			        	<ul class="episodefilter filter"  id="clipsmenumobile">
+			        		<!-- from mustache -->
+			        	</ul>
+			        </li>
+
+			        <li ><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
+			        </li>
+			        <li ><a class="scroll" href="#about">About</a></li>
+        </ul>
+
         <ul class="sidebar">
-        		<li class="logo"><a href="#top"><img src="images/TAS_Logo.gif"></a></li>
-	              <div class="sorter">
+        	
+    		<li class="logo"><a href="#top"><img src="images/TAS_Logo.gif"></a></li>
+
+	            <div class="sorter">
 					<li id="filters" class="navlevel1"><a href="#episodemenu" data-toggle="collapse" data-parent=".sorter">Episodes</a></li>
 					<div class="episodefilter">
 						<ul class="collapse " id="episodemenu"><!-- from mustache --></ul>
@@ -58,13 +84,10 @@
 
 			        <li class="navlevel1"><a href="#" class= "showall" id="filter-none" data-principle="Show All">Show All</a>
 			        </li>
-
 			        <li class="aboutnav navlevel1 "><a class="scroll" href="#about">About</a></li>
-			      </div>
-			    
+		      </div> 
         </ul>
-    	</div>
-		</div>
+
 
         
 		<div class="fullscreen-container" id="top">
@@ -74,6 +97,9 @@
 			    </video>
 			</div>
 			<div class="overlay"></div>
+			<div class="container">
+				<div class="logo mobile"><img src="images/TAS_Logo.gif"></div>
+			</div>
 			<div class="container" id="intro">
 				<h2>bold. clever. new. insightful. boring. fresh. pedantic. </br> 
 					all of the art world covered for you to fast forward through. </br> 
@@ -120,9 +146,9 @@
 		<script src="js/jquery-ui.js"></script>
 	    <script src="js/mustache.js"></script>
 	    <script src="js/list.js"></script>
-		<script src="js/jquery.imagesloaded.min.js"></script>
-		<script src="js/wookmark.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
    		<script src="js/theartshow.js"></script>
+
 
 
 
@@ -130,19 +156,38 @@
 
 	    <script id="episodemenulist" type="text/template">
 	    	{{#.}}
-		        <li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-episode="{{episodetitles}}">{{episodetitles}}</a></li>
+		        <li class="navlevel2 remove"><a href="#" data-parent="clickbait-filter" data-episode="{{episodetitles}}">{{episodetitles}}</a></li>
 			{{/.}}
 		</script>
 
 		<script id="participantmenulist" type="text/template">
 	    	{{#.}}
-		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-participant="{{participants}}">{{participants}}</a></li>
+		 		<li class="navlevel2 remove"><a href="#" data-parent="clickbait-filter" data-participant="{{participants}}">{{participants}}</a></li>
 			{{/.}}
 		</script>
 
 		<script id="clipsmenulist" type="text/template">
 	    	{{#.}}
-		 		<li class="navlevel2"><a href="#" data-parent="clickbait-filter" data-episode="{{clips}}">{{clips}}</a></li>
+		 		<li class="navlevel2 remove"><a href="#" data-parent="clickbait-filter" data-episode="{{clips}}">{{clips}}</a></li>
+			{{/.}}
+		</script>
+
+
+		<script id="episodemenulistmobile" type="text/template">
+	    	{{#.}}
+		        <li ><a href="#" data-parent="clickbait-filter" data-episode="{{episodetitles}}">{{episodetitles}}</a></li>
+			{{/.}}
+		</script>
+
+		<script id="participantmenulistmobile" type="text/template">
+	    	{{#.}}
+		 		<li ><a href="#" data-parent="clickbait-filter" data-participant="{{participants}}">{{participants}}</a></li>
+			{{/.}}
+		</script>
+
+		<script id="clipsmenulistmobile" type="text/template">
+	    	{{#.}}
+		 		<li ><a href="#" data-parent="clickbait-filter" data-episode="{{clips}}">{{clips}}</a></li>
 			{{/.}}
 		</script>
 

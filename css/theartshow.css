@@ -1,3 +1,5 @@
+
+
 h1 {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 5em;
@@ -20,6 +22,12 @@ h2 {
 @media (max-width: 1150px) {
   h2 {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8em;
   }
 }
 
@@ -73,7 +81,23 @@ pre {
     line-height: 18.5714px;
 }
 
+.sidebar a {
+    color: black;
+    padding: .1em;
+    margin-top: 1em;
+}
 
+.sidebar a:hover, a:active, a:focus {
+    padding: .1em;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.logo a:hover {
+  background-color: transparent;
+
+}
 
 .textwhitebg {
     color: black;
@@ -188,15 +212,81 @@ pre {
   margin-top: 24px;  
 }
 
-/*.aboutnav a {
-  color: white;
-  background-color: black;
+.mobile-nav {
+    list-style: none;
+    background: #111;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
 }
 
-.aboutnav a:hover {
-  color: black;
-  background-color: white;
-}*/
+@media (min-width: 767px) {
+  .slicknav_menu {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .mobile-nav {
+    display: block;
+  }
+}
+
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 4em;
+    background-image: linear-gradient(135deg, 
+                      rgb(254,255,255) 0%,
+                      rgb(221,241,249) 35%,
+                      rgb(160,216,239) 100%);    
+    background-size: 200%;
+}
+
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+    display: none;
+}
+
+@media (max-width: 767px) {
+  label[for="nav-trigger"] {
+    display: block;
+  }
+}
+
+.nav-trigger:checked + label {
+    left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
 
 .sidebar {
     height: 85%;
@@ -235,22 +325,34 @@ pre {
  display: none;
 }
 
-a {
-    color: black;
-    padding: .1em;
-    margin-top: 1em;
+@media only screen and (max-width: 767px){
+    .sidebar {
+      display: none;
+    }
 }
 
-a:hover, a:active, a:focus {
-    padding: .1em;
-    text-decoration: none;
-    color: black;
-    background-color: white;
+#mobilemenu {
+      display: none;
 }
 
-.logo a:hover {
-  background-color: transparent;
 
+
+@media only screen and (max-width: 767px){
+    .logo img {
+        width: 100px;
+        height: auto;
+        padding-top: 2.5em;
+    }
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px){
+    .mobile {
+      display: block;
+    }
 }
 
 /*a:visited {
@@ -265,12 +367,33 @@ a:hover:visited {
 .container {
     margin-left: 224px;
     margin-right: 24px;
+    padding: 0;
+}
+
+@media only screen and (max-width: 767px){
+    .container {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 }
 
 #intro {
-  padding-left: 50px;
+  padding-left: 0px;
   position: absolute;
   bottom: 24px;
+}
+
+@media only screen and (max-width: 767px){
+    #intro {
+      margin-left: 150px;
+      bottom: 6px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #intro {
+      margin-left: 12px;
+    }
 }
 
 .fullscreen-container {
@@ -323,7 +446,7 @@ a:hover:visited {
 .overlay {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     top:0;
     right: 0;
@@ -428,6 +551,19 @@ ul.grid-display .thumb {
     margin-bottom: 2em;
 }
 
+@media (max-width: 767px) {
+  .setwidth {
+    padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .setwidth {
+    width: 300px;
+    padding: 0;
+  }
+}
+
 
 .widewidth {
   width:800px;
@@ -494,6 +630,14 @@ iframe {
     margin-left: 15px;
     width: 75%;
     padding-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  #about {
+    margin-left: 0px;
+    width: 100%;
+    padding-bottom: 100px;
+  }
 }
 
 .footer {
