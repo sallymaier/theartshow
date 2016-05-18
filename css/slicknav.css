@@ -60,7 +60,9 @@
     display: block; }
   .slicknav_nav li {
     display: block;
-    margin-top: 1em; }
+    margin-top: 1em;
+    float:left;
+    font-weight: bold; }
   .slicknav_nav .slicknav_arrow {
     font-size: 0.8em;
     margin: 0 0 0 0.4em; 
@@ -116,6 +118,7 @@
   .slicknav_nav ul {
     list-style: none;
     height: 90%;
+    width: 100vw;
     overflow-y: scroll;
     padding: 0;
     margin: 0 0 0 20px; }
