@@ -88,7 +88,6 @@ pre {
 }
 
 .sidebar a:hover, a:active, a:focus {
-    padding: .1em;
     text-decoration: none;
     color: black;
     background-color: white;
