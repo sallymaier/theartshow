@@ -6,6 +6,12 @@ $(document).ready(function() {
           $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
   });
 
+  $('a').on('click touchend', function(e) {
+      var el = $(this);
+      var link = el.attr('href');
+      window.location = link;
+   });
+
   //mustache for menu
   $.getJSON('https://sheetlabs.com/SALL/theartshowtvmenu', function(data) {
     var template = $('#episodemenulist').html();
